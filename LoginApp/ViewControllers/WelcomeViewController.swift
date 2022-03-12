@@ -11,7 +11,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     
-    var welcomeValue: String!
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,6 @@ class WelcomeViewController: UIViewController {
         ]
         self.view.layer.insertSublayer(gradientLayer, at: 0)
         
-        welcomeLabel.text = "Welcome, \(welcomeValue ?? "User")."
-    }
-    
-    @IBAction func logOutButton() {
-        dismiss(animated: true)
+        welcomeLabel.text = "Hello, \(user)!"
     }
 }
